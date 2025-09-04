@@ -1,11 +1,22 @@
-from PyQt6.QtWidgets import QApplication, QWidget
+from PyQt6.QtCore import QSize, Qt
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget
 import sys
+
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("The Reminder App")
+        button = QPushButton("press it")
+
+        self.setCentralWidget(button)
+
 
 app = QApplication(sys.argv)
 
-window = QWidget()
-window.setWindowTitle("PyQt6 Test Window")
-window.resize(400, 300)
+window = MainWindow()
+
 window.show()
 
 app.exec()
