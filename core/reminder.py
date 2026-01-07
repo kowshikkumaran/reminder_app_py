@@ -2,14 +2,10 @@ import time
 import random
 
 
-def message():
-    print("drink water")
-
-
 def remind(messages):
     i = 0
     while i < 12:
-        message()
+        print("drink water")
         print(random.choice(messages))
         i += 1
         time.sleep(2)  # wait for 1 hour
