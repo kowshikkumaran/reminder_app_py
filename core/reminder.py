@@ -1,13 +1,14 @@
 import time
 import random
 
+number_intervals = 12
+interval_duration = 1  # 1 hour in seconds
+
 
 def remind(messages):
-    i = 0
-    while i < 12:
+    for i in range(number_intervals):
         print("drink water")
         print(random.choice(messages))
-        i += 1
-        time.sleep(2)  # wait for 1 hour
+        time.sleep(interval_duration)  # wait for 1 hour
     else:
         print("day ended and u have reached your frequent hydration needs")
